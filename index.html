@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>물고기 백과사전</title>
     <style>
-        /* 기본 스타일 초기화 */
+        /* 전체 페이지 기본 스타일 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Malgun Gothic', sans-serif; background-color: #f5f7fa; color: #333; }
         a { text-decoration: none; color: inherit; }
 
-        /* 헤더 & 카테고리 네비게이션 */
+        /* 상단 헤더 및 카테고리 스타일 */
         header {
             background-color: #fff;
             padding: 1.5rem;
@@ -20,7 +20,6 @@
             top: 0;
             z-index: 100;
         }
-
         header h1 { color: #0077b6; margin-bottom: 1rem; }
 
         .categories {
@@ -31,23 +30,11 @@
             border-top: 1px solid #eee;
             padding-top: 1rem;
         }
-
-        .categories li a {
-            font-weight: bold;
-            font-size: 1.1rem;
-            color: #666;
-            transition: color 0.3s;
-        }
-
+        .categories li a { font-weight: bold; font-size: 1.1rem; color: #666; transition: color 0.3s; }
         .categories li a:hover { color: #0077b6; }
 
-        /* 메인 콘텐츠 목록 */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
+        /* 메인 콘텐츠 영역 (그리드 레이아웃) */
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
         .fish-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -63,13 +50,8 @@
             transition: transform 0.3s ease;
             cursor: pointer;
         }
+        .fish-card:hover { transform: translateY(-10px); }
 
-        /* 마우스를 올렸을 때 살짝 들리는 효과 */
-        .fish-card:hover {
-            transform: translateY(-10px);
-        }
-
-        /* 사진 영역 */
         .fish-photo {
             width: 100%;
             height: 200px;
@@ -77,24 +59,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-        }
-
-        .fish-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* 이름 영역 */
-        .fish-name {
-            padding: 1.2rem;
-            text-align: center;
-            font-size: 1.2rem;
             font-weight: bold;
+            color: #0077b6;
         }
 
-        /* 하단 여백용 */
+        .fish-name { padding: 1.2rem; text-align: center; font-size: 1.2rem; font-weight: bold; }
         footer { padding: 5rem; text-align: center; color: #aaa; font-size: 0.9rem; }
     </style>
 </head>
@@ -115,28 +84,22 @@
     <main class="container">
         <div class="fish-list">
             
-            <div class="fish-card" onclick="location.href='test.html'">
-                <div class="fish-photo">
-                    <img src="https://via.placeholder.com/300x200?text=Fish+Image" alt="물고기 사진">
-                </div>
+            <div class="fish-card" onclick="alert('세부 페이지 준비 중!')">
+                <div class="fish-photo">금붕어 사진 영역</div>
                 <div class="fish-name">금붕어</div>
             </div>
 
             <div class="fish-card" onclick="alert('세부 페이지 준비 중!')">
-                <div class="fish-photo">
-                    <img src="https://via.placeholder.com/300x200?text=Fish+Image" alt="물고기 사진">
-                </div>
+                <div class="fish-photo">흰동가리 사진 영역</div>
                 <div class="fish-name">니모 (흰동가리)</div>
             </div>
 
-            <div class="fish-card">
-                <div class="fish-photo">
-                    <img src="https://via.placeholder.com/300x200?text=Fish+Image" alt="물고기 사진">
-                </div>
+            <div class="fish-card" onclick="alert('세부 페이지 준비 중!')">
+                <div class="fish-photo">초록복어 사진 영역</div>
                 <div class="fish-name">초록복어</div>
             </div>
 
-            </div>
+        </div>
     </main>
 
     <footer>
